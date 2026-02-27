@@ -8,6 +8,9 @@ const TextRepeater = dynamic(() => import("@/components/tools/TextRepeater"), { 
 const LoremIpsumGenerator = dynamic(() => import("@/components/tools/LoremIpsumGenerator"), { loading: () => <Loader /> });
 const MarkdownConverter = dynamic(() => import("@/components/tools/MarkdownConverter"), { loading: () => <Loader /> });
 const TextDiff = dynamic(() => import("@/components/tools/TextDiff"), { loading: () => <Loader /> });
+const SlugGenerator = dynamic(() => import("@/components/tools/SlugGenerator"), { loading: () => <Loader /> });
+const TextToHtml = dynamic(() => import("@/components/tools/TextToHtml"), { loading: () => <Loader /> });
+const UnicodeTextConverter = dynamic(() => import("@/components/tools/UnicodeTextConverter"), { loading: () => <Loader /> });
 
 // Developer Tools
 const JsonFormatter = dynamic(() => import("@/components/tools/JsonFormatter"), { loading: () => <Loader /> });
@@ -16,6 +19,9 @@ const UrlEncoder = dynamic(() => import("@/components/tools/UrlEncoder"), { load
 const UuidGenerator = dynamic(() => import("@/components/tools/UuidGenerator"), { loading: () => <Loader /> });
 const HtmlMinifier = dynamic(() => import("@/components/tools/HtmlMinifier"), { loading: () => <Loader /> });
 const JwtDecoder = dynamic(() => import("@/components/tools/JwtDecoder"), { loading: () => <Loader /> });
+const MermaidConverter = dynamic(() => import("@/components/tools/MermaidConverter"), { loading: () => <Loader /> });
+const UnitConverter = dynamic(() => import("@/components/tools/UnitConverter"), { loading: () => <Loader /> });
+const ColorConverter = dynamic(() => import("@/components/tools/ColorConverter"), { loading: () => <Loader /> });
 
 const Loader = () => (
     <div className="flex h-40 w-full items-center justify-center">
@@ -37,6 +43,12 @@ export function ToolRenderer({ slug }: { slug: string }) {
             return <MarkdownConverter />;
         case "text-diff":
             return <TextDiff />;
+        case "slug-generator":
+            return <SlugGenerator />;
+        case "text-to-html":
+            return <TextToHtml />;
+        case "unicode-text-converter":
+            return <UnicodeTextConverter />;
         case "json-formatter":
             return <JsonFormatter />;
         case "base64-encode-decode":
@@ -49,6 +61,12 @@ export function ToolRenderer({ slug }: { slug: string }) {
             return <HtmlMinifier />;
         case "jwt-decoder":
             return <JwtDecoder />;
+        case "mermaid-converter":
+            return <MermaidConverter />;
+        case "unit-converter":
+            return <UnitConverter />;
+        case "color-converter":
+            return <ColorConverter />;
         default:
             return <div>Tool implementation not found for slug: {slug}</div>;
     }

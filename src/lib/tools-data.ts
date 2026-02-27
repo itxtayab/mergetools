@@ -121,7 +121,59 @@ export const toolsData: ToolItem[] = [
         category: "developer-tools",
         metaTitle: "JWT Decoder & Viewer Online",
         metaDescription: "Free online tool to securely decode JWT tokens and inspect claims and payload information without sending to server.",
-    }
+    },
+
+    // Text Tools (New)
+    {
+        slug: "slug-generator",
+        name: "Slug Generator",
+        description: "Convert any text or title into a clean, SEO-friendly URL slug.",
+        category: "text-tools",
+        metaTitle: "Slug Generator - Create SEO-Friendly URL Slugs Online",
+        metaDescription: "Free online slug generator tool. Convert titles, headlines, or any text into clean, URL-safe slugs for SEO-friendly web addresses.",
+    },
+    {
+        slug: "text-to-html",
+        name: "Text to HTML Converter",
+        description: "Convert plain text with line breaks into properly formatted HTML code.",
+        category: "text-tools",
+        metaTitle: "Text to HTML Converter - Plain Text to HTML Online",
+        metaDescription: "Free online tool to convert plain text to HTML. Automatically wraps paragraphs, converts line breaks to tags, and generates clean HTML code.",
+    },
+    {
+        slug: "unicode-text-converter",
+        name: "Unicode Text Converter",
+        description: "Transform text into fancy Unicode fonts for social media and bios.",
+        category: "text-tools",
+        metaTitle: "Fancy Text Generator - Unicode Text Converter Online",
+        metaDescription: "Free fancy text generator with 15+ Unicode font styles. Create bold, italic, cursive, gothic, and decorative text for Instagram, Twitter, and more.",
+    },
+
+    // Developer Tools (New)
+    {
+        slug: "mermaid-converter",
+        name: "Mermaid Diagram Converter",
+        description: "Render Mermaid diagram code into downloadable PNG or SVG images.",
+        category: "developer-tools",
+        metaTitle: "Mermaid Diagram to Image Converter - PNG & SVG Online",
+        metaDescription: "Free online Mermaid diagram converter. Write Mermaid code and instantly render flowcharts, sequence diagrams, and more as downloadable PNG or SVG images.",
+    },
+    {
+        slug: "unit-converter",
+        name: "Unit Converter",
+        description: "Convert between all units: length, weight, temperature, data, speed, time, volume, and more.",
+        category: "developer-tools",
+        metaTitle: "Unit Converter - Convert Length, Weight, Temperature & More Online",
+        metaDescription: "Free all-in-one unit converter. Convert distance, weight, temperature, data storage, speed, time, volume, area, and calculate tips instantly.",
+    },
+    {
+        slug: "color-converter",
+        name: "Color Code Converter",
+        description: "Convert and pick colors between HEX, RGB, HSL, and CMYK formats.",
+        category: "developer-tools",
+        metaTitle: "Color Converter - HEX to RGB, HSL, CMYK Online Tool",
+        metaDescription: "Free online color converter with visual picker. Convert between HEX, RGB, HSL, and CMYK color formats instantly with live preview.",
+    },
 ];
 
 export function getToolsByCategory(category: ToolCategory): ToolItem[] {
