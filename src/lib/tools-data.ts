@@ -221,21 +221,24 @@ export const toolsData: ToolItem[] = [
     {
         slug: "json-formatter",
         name: "JSON Formatter",
-        description: "Format, beautify and validate JSON data instantly.",
+        description: "Format, beautify, validate and convert JSON data with syntax highlighting, tree view, and auto-fix.",
         category: "developer-tools",
-        metaTitle: "JSON Formatter & Validator - Format JSON Online",
-        metaDescription: "Free online JSON formatter and validator. Beautify, format, minify, and parse JSON code with error highlighting.",
+        metaTitle: "JSON Formatter & Validator - Format, Convert & Fix JSON Online | DevPik",
+        metaDescription: "Free online JSON formatter with syntax highlighting, tree view, JSON to XML/CSV/YAML conversion, auto-fix, file upload, search, and statistics. 100% client-side.",
         howToUse: [
-            "Paste your raw or minified JSON data into the left input panel.",
-            "Click 'Format / Beautify' to pretty-print your JSON with proper indentation, or 'Minify JSON' to compress it.",
-            "If your JSON has syntax errors, you'll see a clear error message with details. Copy the formatted output when ready."
+            "Paste your JSON into the input panel, drag & drop a .json file, or click Upload to import from your device.",
+            "Click 'Format' to beautify with syntax highlighting, 'Minify' to compress, or 'Fix JSON' to auto-repair common errors like trailing commas and single quotes.",
+            "Switch between Code view (with color-coded syntax) and Tree view (interactive expandable/collapsible hierarchy) to explore your data.",
+            "Use 'Convert' to transform JSON to XML, CSV, or YAML format. Download or copy the output when ready.",
+            "Toggle 'Auto' mode to format on paste, use Search to find keys/values, and check the Statistics panel for data insights."
         ],
-        about: "The JSON Formatter is a powerful tool for developers who work with JSON data daily. It validates, formats (beautifies), and minifies JSON with a single click. Paste any JSON — from API responses, configuration files, database exports, or log outputs — and instantly get clean, properly indented output. The validator catches syntax errors like missing commas, unclosed brackets, and invalid values, displaying clear error messages to help you debug quickly. Choose between 2-space, 4-space, or 8-space indentation to match your project's code style. The minify feature removes all whitespace to produce the most compact JSON possible, perfect for reducing payload sizes. All processing happens client-side in your browser, so your sensitive API keys and data never leave your device.",
+        about: "The JSON Formatter is a professional-grade JSON toolkit for developers. Beyond basic formatting and validation, it offers syntax highlighting with color-coded keys, strings, numbers, booleans, and nulls. The interactive tree view lets you explore JSON hierarchies with expand/collapse controls, type badges, and click-to-copy JSON paths. The auto-fix feature intelligently repairs common JSON errors including trailing commas, single quotes, and unquoted keys. Convert JSON to XML, CSV, or YAML with a single click. Upload JSON files via file picker or drag-and-drop, and download formatted output. The statistics panel shows key counts, nesting depth, data type distribution, and file size. Auto-format mode processes JSON on paste, and the search feature highlights matching keys and values across both code and tree views. Your data is saved locally between sessions, and all processing happens 100% client-side — no data ever leaves your browser.",
         faqs: [
-            { question: "What types of JSON errors can this detect?", answer: "The formatter detects all JSON syntax errors including missing or extra commas, unclosed brackets and braces, unquoted property names, single quotes instead of double quotes, trailing commas, and invalid escape sequences." },
-            { question: "Can I format large JSON files?", answer: "Yes! The tool handles large JSON files efficiently since processing happens in your browser. For files over 10MB, performance depends on your device, but typical API responses and config files are processed instantly." },
-            { question: "What's the difference between format and minify?", answer: "Format (beautify) adds proper indentation and line breaks to make JSON human-readable. Minify does the opposite — it removes all unnecessary whitespace to produce the smallest possible output, reducing file size for production use." },
-            { question: "Is my JSON data secure?", answer: "Completely secure. The JSON Formatter processes everything locally in your browser. No data is ever sent to any server, making it safe for formatting JSON containing API keys, tokens, or sensitive configuration." }
+            { question: "What types of JSON errors can this detect and fix?", answer: "The formatter validates all JSON syntax and provides detailed error messages. The 'Fix JSON' feature auto-repairs common issues like trailing commas, single quotes instead of double quotes, and unquoted property names. For other errors, you'll get precise messages to help you debug." },
+            { question: "What formats can I convert JSON to?", answer: "You can convert JSON to XML (with proper element nesting and escaping), CSV (flattens arrays of objects with header detection), and YAML (with correct indentation and type handling). Each conversion preserves data integrity." },
+            { question: "How does the tree view work?", answer: "The tree view displays your JSON as an interactive hierarchy. Click nodes to expand/collapse, see type badges (Array[5], Object{3}), and click any node to copy its JSON path. Use 'Expand All' and 'Collapse All' buttons, and the search highlights matching nodes." },
+            { question: "Is my JSON data secure?", answer: "100% secure. Everything processes locally in your browser — no server requests. Your data is saved in localStorage for convenience between sessions but never transmitted. Safe for API keys, tokens, and sensitive configuration." },
+            { question: "Can I upload and download JSON files?", answer: "Yes! Click 'Upload' or drag-and-drop a .json file directly onto the input area. After formatting or converting, click 'Download' to save the result as a file." }
         ],
         relatedSlugs: ["base64-encode-decode", "jwt-decoder", "html-minifier", "url-encode-decode"]
     },
