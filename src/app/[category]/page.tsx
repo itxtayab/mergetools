@@ -46,9 +46,9 @@ export default async function CategoryPage(props: Props) {
 
     return (
         <div className="flex flex-col gap-10 pb-12">
-            <section className="flex flex-col space-y-4 rounded-3xl bg-slate-100 dark:bg-slate-900/50 p-8 md:p-12 border border-border/50">
+            <section className="flex flex-col space-y-4 rounded-3xl bg-slate-100 p-8 md:p-12 border border-border/50">
                 <div className="flex items-center gap-4">
-                    <div className="rounded-xl bg-white dark:bg-slate-800 p-3 shadow-sm ring-1 ring-border/50">
+                    <div className="rounded-xl bg-white p-3 shadow-sm ring-1 ring-border/50">
                         <CategoryIcon category={categoryId} />
                     </div>
                     <div>
@@ -64,9 +64,9 @@ export default async function CategoryPage(props: Props) {
                         <Link
                             key={tool.slug}
                             href={`/${categoryId}/${tool.slug}`}
-                            className="group relative flex flex-col justify-between overflow-hidden rounded-xl border border-border bg-card p-6 shadow-sm transition-all hover:shadow-md hover:border-primary/50 dark:hover:border-primary/50"
+                            className="group relative flex flex-col justify-between overflow-hidden rounded-xl border border-border bg-card p-6 shadow-sm transition-all hover:shadow-md hover:border-primary/50"
                         >
-                            <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 transition-opacity group-hover:opacity-100 dark:from-primary/10" />
+                            <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 transition-opacity group-hover:opacity-100" />
                             <div className="z-10 flex flex-col gap-3">
                                 <h2 className="text-xl font-semibold leading-none tracking-tight group-hover:text-primary transition-colors">
                                     {tool.name}
