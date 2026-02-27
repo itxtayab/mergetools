@@ -1,10 +1,10 @@
 import { notFound } from "next/navigation";
 import { Metadata } from "next";
-import { getToolBySlug, CATEGORIES, ToolCategory } from "@/lib/tools-data";
+import { getToolBySlug, getToolsByCategory, CATEGORIES, ToolCategory } from "@/lib/tools-data";
 import { ChevronRight } from "lucide-react";
 import Link from "next/link";
 import { ToolRenderer } from "./tool-renderer";
-import { StructuredData, generateSoftwareApplicationSchema, generateBreadcrumbSchema } from "@/components/seo/StructuredData";
+import { StructuredData, generateSoftwareApplicationSchema, generateBreadcrumbSchema, generateFAQSchema } from "@/components/seo/StructuredData";
 
 interface Props {
     params: Promise<{ category: string; tool: string }>;
@@ -33,24 +33,33 @@ export default async function ToolPage(props: Props) {
     }
 
     const category = CATEGORIES[tool.category as ToolCategory];
+    const baseUrl = "https://tools.mergemain.com";
 
     const appSchema = generateSoftwareApplicationSchema(
         tool.name,
         tool.description,
-        `https://mergetools.example.com/${tool.category}/${tool.slug}`,
+        `${baseUrl}/${tool.category}/${tool.slug}`,
         tool.category
     );
 
     const breadcrumbSchema = generateBreadcrumbSchema([
-        { name: "Home", url: "https://mergetools.example.com" },
-        { name: category.name, url: `https://mergetools.example.com/${tool.category}` },
-        { name: tool.name, url: `https://mergetools.example.com/${tool.category}/${tool.slug}` },
+        { name: "Home", url: baseUrl },
+        { name: category.name, url: `${baseUrl}/${tool.category}` },
+        { name: tool.name, url: `${baseUrl}/${tool.category}/${tool.slug}` },
     ]);
+
+    const faqSchema = tool.faqs.length > 0 ? generateFAQSchema(tool.faqs) : null;
+
+    // Get related tools
+    const relatedTools = tool.relatedSlugs
+        .map(slug => getToolBySlug(slug))
+        .filter(Boolean);
 
     return (
         <div className="flex flex-col gap-10 pb-12">
             <StructuredData data={appSchema} />
             <StructuredData data={breadcrumbSchema} />
+            {faqSchema && <StructuredData data={faqSchema} />}
 
             {/* Breadcrumbs */}
             <nav className="flex items-center text-sm font-medium text-muted-foreground whitespace-nowrap overflow-x-auto pb-2">
@@ -74,24 +83,55 @@ export default async function ToolPage(props: Props) {
                 <ToolRenderer slug={tool.slug} />
             </section>
 
-            {/* Content Section (How to Use & About) */}
-            <section className="space-y-8 prose prose-slate dark:prose-invert max-w-none">
-                <div>
-                    <h2>How to Use {tool.name}</h2>
-                    <ol>
-                        <li>Input your required data into the tool.</li>
-                        <li>Configure any necessary settings or options.</li>
-                        <li>Instantly view and copy your generated results.</li>
-                    </ol>
-                </div>
-
-                <div>
-                    <h2>About This Tool</h2>
-                    <p>
-                        The <strong>{tool.name}</strong> is a high-performance, purely client-side browser utility built to ensure maximum privacy and speed. Since processing occurs locally on your device, no sensitive information is transmitted over the network.
-                    </p>
-                </div>
+            {/* How to Use Section */}
+            <section className="prose prose-slate max-w-none">
+                <h2>How to Use {tool.name}</h2>
+                <ol className="space-y-2">
+                    {tool.howToUse.map((step, index) => (
+                        <li key={index}>{step}</li>
+                    ))}
+                </ol>
             </section>
+
+            {/* About Section */}
+            <section className="prose prose-slate max-w-none">
+                <h2>About {tool.name}</h2>
+                <p>{tool.about}</p>
+            </section>
+
+            {/* FAQ Section */}
+            {tool.faqs.length > 0 && (
+                <section className="space-y-6">
+                    <h2 className="text-2xl font-bold tracking-tight">Frequently Asked Questions</h2>
+                    <div className="grid gap-4">
+                        {tool.faqs.map((faq, index) => (
+                            <div key={index} className="rounded-xl border border-border/60 bg-card p-5 shadow-sm">
+                                <h3 className="text-base font-semibold text-foreground mb-2">{faq.question}</h3>
+                                <p className="text-sm text-muted-foreground leading-relaxed">{faq.answer}</p>
+                            </div>
+                        ))}
+                    </div>
+                </section>
+            )}
+
+            {/* Related Tools Section */}
+            {relatedTools.length > 0 && (
+                <section className="space-y-6">
+                    <h2 className="text-2xl font-bold tracking-tight">Related Tools</h2>
+                    <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+                        {relatedTools.map((related) => related && (
+                            <Link
+                                key={related.slug}
+                                href={`/${related.category}/${related.slug}`}
+                                className="group rounded-xl border border-border/60 bg-card p-5 shadow-sm transition-all hover:shadow-md hover:border-primary/30"
+                            >
+                                <h3 className="font-semibold text-foreground group-hover:text-primary transition-colors">{related.name}</h3>
+                                <p className="mt-1.5 text-xs text-muted-foreground line-clamp-2">{related.description}</p>
+                            </Link>
+                        ))}
+                    </div>
+                </section>
+            )}
         </div>
     );
 }

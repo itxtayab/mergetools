@@ -42,7 +42,7 @@ export default function MarkdownConverter() {
 
                 {/* Input Area */}
                 <div className="flex flex-col h-full rounded-xl border border-border bg-card overflow-hidden shadow-sm">
-                    <div className="flex items-center justify-between px-4 py-3 border-b border-border/50 bg-slate-50 dark:bg-slate-900/50">
+                    <div className="flex items-center justify-between px-4 py-3 border-b border-border/50 bg-slate-50">
                         <span className="text-sm font-semibold flex items-center gap-2">
                             <FileTerminal className="w-4 h-4 text-primary" />
                             Markdown Input
@@ -71,7 +71,7 @@ export default function MarkdownConverter() {
 
                     {/* HTML Code Output */}
                     <div className="flex flex-col flex-1 rounded-xl border border-border bg-card overflow-hidden shadow-sm relative">
-                        <div className="flex items-center justify-between px-4 py-3 border-b border-border/50 bg-slate-50 dark:bg-slate-900/50">
+                        <div className="flex items-center justify-between px-4 py-3 border-b border-border/50 bg-slate-50">
                             <span className="text-sm font-semibold flex items-center gap-2">
                                 HTML Output
                             </span>
@@ -79,14 +79,14 @@ export default function MarkdownConverter() {
                                 <button
                                     onClick={handleCopy}
                                     disabled={!html}
-                                    className="flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium text-muted-foreground bg-slate-100 hover:bg-slate-200 hover:text-foreground dark:bg-slate-800 dark:hover:bg-slate-700 disabled:opacity-50 rounded-md transition-colors"
+                                    className="flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium text-muted-foreground bg-slate-100 hover:bg-slate-200 hover:text-foreground disabled:opacity-50 rounded-md transition-colors"
                                 >
                                     {isCopied ? <CheckCheck className="w-3.5 h-3.5 text-green-500" /> : <Copy className="w-3.5 h-3.5" />}
                                     {isCopied ? "Copied" : "Copy"}
                                 </button>
                             </div>
                         </div>
-                        <div className="flex-1 w-full bg-slate-50/50 dark:bg-slate-900/20 overflow-auto">
+                        <div className="flex-1 w-full bg-slate-50/50 overflow-auto">
                             <pre className="p-4 m-0 font-mono text-xs sm:text-sm text-foreground whitespace-pre-wrap word-break">
                                 {html || <span className="text-muted-foreground/50 italic">Generated HTML will appear here...</span>}
                             </pre>
@@ -95,15 +95,15 @@ export default function MarkdownConverter() {
 
                     {/* Visual Preview */}
                     <div className="flex flex-col flex-1 rounded-xl border border-border bg-card overflow-hidden shadow-sm relative">
-                        <div className="flex items-center justify-between px-4 py-3 border-b border-border/50 bg-slate-50 dark:bg-slate-900/50">
+                        <div className="flex items-center justify-between px-4 py-3 border-b border-border/50 bg-slate-50">
                             <span className="text-sm font-semibold flex items-center gap-2">
                                 Visual Preview
                             </span>
                         </div>
-                        <div className="flex-1 w-full bg-white dark:bg-slate-950 overflow-auto p-4">
+                        <div className="flex-1 w-full bg-white overflow-auto p-4">
                             {html ? (
                                 <div
-                                    className="prose prose-sm sm:prose-base dark:prose-invert max-w-none"
+                                    className="prose prose-sm sm:prose-base max-w-none"
                                     dangerouslySetInnerHTML={{ __html: html }}
                                 />
                             ) : (

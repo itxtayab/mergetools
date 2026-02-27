@@ -10,10 +10,10 @@ export default function TermsPage() {
         <div className="mx-auto max-w-4xl space-y-8 pb-12">
             <div className="space-y-4">
                 <h1 className="text-4xl font-bold tracking-tight md:text-5xl">Terms and Conditions</h1>
-                <p className="text-muted-foreground">Last Updated: October 2023</p>
+                <p className="text-muted-foreground">Last Updated: February 2026</p>
             </div>
 
-            <div className="prose prose-slate dark:prose-invert max-w-none">
+            <div className="prose prose-slate max-w-none">
                 <p>
                     Welcome to Merge Tools! These terms and conditions outline the rules and regulations for the use of our website.
                 </p>

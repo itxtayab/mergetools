@@ -91,7 +91,7 @@ export default function LoremIpsumGenerator() {
 
     return (
         <div className="flex flex-col gap-6">
-            <div className="flex flex-col sm:flex-row items-end gap-4 bg-slate-50 dark:bg-slate-900/50 p-4 rounded-xl border border-border/50">
+            <div className="flex flex-col sm:flex-row items-end gap-4 bg-slate-50 p-4 rounded-xl border border-border/50">
 
                 <div className="flex flex-col w-full sm:w-1/3 gap-2">
                     <label className="text-sm font-medium text-muted-foreground flex items-center gap-2">
@@ -134,14 +134,14 @@ export default function LoremIpsumGenerator() {
             </div>
 
             <div className="flex flex-col rounded-xl border border-border bg-card overflow-hidden shadow-sm">
-                <div className="flex items-center justify-between px-4 py-3 border-b border-border/50 bg-slate-50 dark:bg-slate-900/50">
+                <div className="flex items-center justify-between px-4 py-3 border-b border-border/50 bg-slate-50">
                     <span className="text-sm font-semibold text-foreground">Output</span>
                     <button
                         onClick={handleCopy}
                         disabled={!output}
                         className={cn(
-                            "flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium bg-slate-100 dark:bg-slate-800 rounded-md transition-colors",
-                            isCopied ? "text-green-500 bg-green-50 dark:bg-green-900/20" : "text-muted-foreground hover:text-foreground hover:bg-slate-200 dark:hover:bg-slate-700 disabled:opacity-50"
+                            "flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium bg-slate-100 rounded-md transition-colors",
+                            isCopied ? "text-green-500 bg-green-50" : "text-muted-foreground hover:text-foreground hover:bg-slate-200 disabled:opacity-50"
                         )}
                     >
                         {isCopied ? <CheckCheck className="w-3.5 h-3.5" /> : <Copy className="w-3.5 h-3.5" />}
@@ -150,7 +150,7 @@ export default function LoremIpsumGenerator() {
                 </div>
                 <div className="p-4 bg-transparent max-h-[600px] overflow-auto">
                     {output ? (
-                        <div className="prose prose-slate dark:prose-invert max-w-none text-foreground text-sm sm:text-base whitespace-pre-wrap">
+                        <div className="prose prose-slate max-w-none text-foreground text-sm sm:text-base whitespace-pre-wrap">
                             {output}
                         </div>
                     ) : (

@@ -86,19 +86,19 @@ export default function JwtDecoder() {
             <div className="flex flex-col flex-1 gap-6">
                 {/* Header Area */}
                 <div className="flex flex-col flex-1 rounded-xl border border-border bg-card overflow-hidden shadow-sm">
-                    <div className="flex items-center justify-between px-4 py-3 border-b border-rose-500/20 bg-rose-50 dark:bg-rose-900/10">
-                        <span className="text-sm font-semibold text-rose-600 dark:text-rose-400">Header (Algorithm & Type)</span>
+                    <div className="flex items-center justify-between px-4 py-3 border-b border-rose-500/20 bg-rose-50">
+                        <span className="text-sm font-semibold text-rose-600">Header (Algorithm & Type)</span>
                         <button
                             onClick={() => handleCopy(header, "header")}
                             disabled={!header}
-                            className="p-1.5 hover:bg-rose-200/50 dark:hover:bg-rose-800/50 rounded-md transition-colors disabled:opacity-50 text-rose-500"
+                            className="p-1.5 hover:bg-rose-200/50 rounded-md transition-colors disabled:opacity-50 text-rose-500"
                         >
                             {copiedSection === "header" ? <CheckCheck className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
                         </button>
                     </div>
-                    <div className="p-4 bg-slate-50/50 dark:bg-slate-900/20 max-h-[200px] overflow-auto">
+                    <div className="p-4 bg-slate-50/50 max-h-[200px] overflow-auto">
                         {header ? (
-                            <pre className="font-mono text-sm text-foreground m-0 p-0 overflow-visible text-rose-600 dark:text-rose-400">
+                            <pre className="font-mono text-sm text-foreground m-0 p-0 overflow-visible text-rose-600">
                                 {JSON.stringify(header, null, 2)}
                             </pre>
                         ) : (
@@ -119,7 +119,7 @@ export default function JwtDecoder() {
                             {copiedSection === "payload" ? <CheckCheck className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
                         </button>
                     </div>
-                    <div className="p-4 bg-slate-50/50 dark:bg-slate-900/20 h-full overflow-auto">
+                    <div className="p-4 bg-slate-50/50 h-full overflow-auto">
                         {payload ? (
                             <pre className="font-mono text-sm text-foreground m-0 p-0 overflow-visible text-primary">
                                 {JSON.stringify(payload, null, 2)}

@@ -113,7 +113,7 @@ function CopyField({ label, value }: { label: string; value: string }) {
         <div className="flex flex-col gap-1">
             <label className="text-xs font-medium uppercase tracking-wider text-muted-foreground">{label}</label>
             <div className="flex items-center gap-2">
-                <div className="flex-1 rounded-lg border border-input bg-slate-50 dark:bg-slate-900 px-3 py-2 text-sm font-mono">
+                <div className="flex-1 rounded-lg border border-input bg-slate-50 px-3 py-2 text-sm font-mono">
                     {value}
                 </div>
                 <button
@@ -197,7 +197,7 @@ export default function ColorConverter() {
                                 onChange={handleColorPicker}
                                 className="sr-only"
                             />
-                            <div className="inline-flex items-center gap-1.5 rounded-lg bg-white/90 dark:bg-black/60 border border-border px-3 py-1.5 text-xs font-medium shadow-sm hover:bg-white dark:hover:bg-black/80 transition-colors">
+                            <div className="inline-flex items-center gap-1.5 rounded-lg bg-white/90 border border-border px-3 py-1.5 text-xs font-medium shadow-sm hover:bg-white transition-colors">
                                 <Pipette className="h-3.5 w-3.5" />
                                 Pick Color
                             </div>

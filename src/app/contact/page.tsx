@@ -11,11 +11,11 @@ export default function ContactPage() {
             <div className="space-y-4">
                 <h1 className="text-4xl font-bold tracking-tight md:text-5xl">Contact Us</h1>
                 <p className="text-xl text-muted-foreground">
-                    Have a question, suggestion, or found a bug? We'd love to hear from you.
+                    Have a question, suggestion, or found a bug? We&apos;d love to hear from you.
                 </p>
             </div>
 
-            <div className="prose prose-slate dark:prose-invert max-w-none">
+            <div className="prose prose-slate max-w-none">
                 <p className="text-lg">
                     We are constantly working to improve Merge Tools and add new utilities that our users need.
                     If you have any feedback or feature requests, please reach out to us.
@@ -29,16 +29,16 @@ export default function ContactPage() {
 
                     <div className="space-y-4">
                         <div>
-                            <strong className="block text-sm text-muted-foreground">General Inquiries & Support</strong>
-                            <a href="mailto:support@mergetools.example.com" className="text-primary hover:underline">
-                                support@mergetools.example.com
+                            <strong className="block text-sm text-muted-foreground">General Inquiries &amp; Support</strong>
+                            <a href="mailto:support@mergemain.com" className="text-primary hover:underline">
+                                support@mergemain.com
                             </a>
                         </div>
 
                         <div>
-                            <strong className="block text-sm text-muted-foreground">Business & Partnerships</strong>
-                            <a href="mailto:business@mergetools.example.com" className="text-primary hover:underline">
-                                business@mergetools.example.com
+                            <strong className="block text-sm text-muted-foreground">Business &amp; Partnerships</strong>
+                            <a href="mailto:business@mergemain.com" className="text-primary hover:underline">
+                                business@mergemain.com
                             </a>
                         </div>
                     </div>
@@ -47,7 +47,7 @@ export default function ContactPage() {
                 <h3 className="mt-10">Frequently Asked Questions</h3>
                 <p>
                     Before reaching out, please note that all our tools are free to use and do not require
-                    registration. If a tool isn't working as expected, try clearing your browser cache or
+                    registration. If a tool isn&apos;t working as expected, try clearing your browser cache or
                     disabling extensions that might interfere with JavaScript execution.
                 </p>
             </div>

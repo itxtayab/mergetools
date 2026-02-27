@@ -134,7 +134,7 @@ export default function SlugGenerator() {
                         {copied ? "Copied" : "Copy"}
                     </button>
                 </div>
-                <div className="min-h-[60px] w-full rounded-xl border border-input bg-slate-50 dark:bg-slate-900 px-4 py-3 text-sm font-mono break-all">
+                <div className="min-h-[60px] w-full rounded-xl border border-input bg-slate-50 px-4 py-3 text-sm font-mono break-all">
                     {slug || <span className="text-muted-foreground">Your slug will appear here...</span>}
                 </div>
                 {slug && (

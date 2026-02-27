@@ -2,10 +2,10 @@ import { MetadataRoute } from "next";
 import { CATEGORIES, toolsData, ToolCategory } from "@/lib/tools-data";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-    const baseUrl = "https://mergetools.example.com";
+    const baseUrl = "https://tools.mergemain.com";
 
     // Static routes
-    const staticRoutes = ["", "/about", "/contact", "/privacy-policy", "/terms"].map((route) => ({
+    const staticRoutes = ["", "/about", "/contact", "/privacy-policy", "/terms", "/disclaimer"].map((route) => ({
         url: `${baseUrl}${route}`,
         lastModified: new Date(),
         changeFrequency: "weekly" as const,

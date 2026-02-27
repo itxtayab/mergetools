@@ -15,7 +15,7 @@ export default function AboutPage() {
                 </p>
             </div>
 
-            <div className="prose prose-slate dark:prose-invert max-w-none space-y-6 text-lg leading-relaxed">
+            <div className="prose prose-slate max-w-none space-y-6 text-lg leading-relaxed">
                 <p>
                     Welcome to <strong>Merge Tools</strong>, your go-to destination for free, high-quality digital tools.
                     Founded with the mission to solve micro-problems efficiently, we provide a comprehensive suite of utilities

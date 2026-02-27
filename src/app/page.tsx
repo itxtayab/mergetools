@@ -16,7 +16,7 @@ export default function Home() {
           <Sparkles className="h-4 w-4 text-primary" fill="currentColor" />
           <span>The ultimate toolkit for your digital workflow</span>
         </div>
-        <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl bg-clip-text text-transparent bg-gradient-to-r from-slate-900 via-slate-700 to-slate-900 dark:from-white dark:via-slate-200 dark:to-white drop-shadow-sm pb-2">
+        <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl bg-clip-text text-transparent bg-gradient-to-r from-slate-900 via-slate-700 to-slate-900 drop-shadow-sm pb-2">
           100% Free Online Tools
         </h1>
         <p className="max-w-[42rem] leading-normal text-muted-foreground sm:text-xl sm:leading-8">
@@ -31,7 +31,7 @@ export default function Home() {
         return (
           <section key={category} className="space-y-6">
             <div className="flex items-center gap-3 border-b border-border/40 pb-4">
-              <div className="p-2 rounded-lg bg-slate-100 dark:bg-slate-800 ring-1 ring-border shadow-sm">
+              <div className="p-2 rounded-lg bg-slate-100 ring-1 ring-border shadow-sm">
                 <CategoryIcon category={cat} />
               </div>
               <div>
@@ -45,9 +45,9 @@ export default function Home() {
                 <Link
                   key={tool.slug}
                   href={`/${category}/${tool.slug}`}
-                  className="group relative flex flex-col justify-between overflow-hidden rounded-xl border border-border bg-card p-6 shadow-sm transition-all hover:shadow-md hover:border-primary/50 dark:hover:border-primary/50"
+                  className="group relative flex flex-col justify-between overflow-hidden rounded-xl border border-border bg-card p-6 shadow-sm transition-all hover:shadow-md hover:border-primary/50"
                 >
-                  <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 transition-opacity group-hover:opacity-100 dark:from-primary/10" />
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 transition-opacity group-hover:opacity-100" />
                   <div className="z-10 flex flex-col gap-2">
                     <h3 className="font-semibold leading-none tracking-tight group-hover:text-primary transition-colors">
                       {tool.name}

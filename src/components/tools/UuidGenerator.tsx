@@ -35,7 +35,7 @@ export default function UuidGenerator() {
 
     return (
         <div className="flex flex-col gap-6">
-            <div className="flex flex-col sm:flex-row items-end gap-4 bg-slate-50 dark:bg-slate-900/50 p-4 rounded-xl border border-border/50">
+            <div className="flex flex-col sm:flex-row items-end gap-4 bg-slate-50 p-4 rounded-xl border border-border/50">
                 <div className="flex flex-col w-full sm:w-auto flex-1 gap-2">
                     <label className="text-sm font-medium text-muted-foreground flex items-center gap-2">
                         <Hash className="w-4 h-4" />
@@ -65,7 +65,7 @@ export default function UuidGenerator() {
                         <div
                             key={i}
                             className={cn(
-                                "flex items-center justify-between p-3 px-4 hover:bg-slate-50 dark:hover:bg-slate-900/50 transition-colors",
+                                "flex items-center justify-between p-3 px-4 hover:bg-slate-50 transition-colors",
                                 i !== uuids.length - 1 && "border-b border-border/50"
                             )}
                         >
@@ -75,8 +75,8 @@ export default function UuidGenerator() {
                                 className={cn(
                                     "p-2 rounded-md transition-colors shrink-0",
                                     copiedIndex === i
-                                        ? "bg-green-100 text-green-600 dark:bg-green-900/30 dark:text-green-500"
-                                        : "bg-slate-100 text-slate-500 hover:text-foreground dark:bg-slate-800 dark:text-slate-400 dark:hover:text-foreground"
+                                        ? "bg-green-100 text-green-600"
+                                        : "bg-slate-100 text-slate-500 hover:text-foreground"
                                 )}
                                 title="Copy to clipboard"
                             >
@@ -88,7 +88,7 @@ export default function UuidGenerator() {
             )}
 
             {uuids.length === 0 && (
-                <div className="flex flex-col items-center justify-center text-center p-12 bg-slate-50 dark:bg-slate-900/50 rounded-xl border border-dashed border-border/60">
+                <div className="flex flex-col items-center justify-center text-center p-12 bg-slate-50 rounded-xl border border-dashed border-border/60">
                     <p className="text-muted-foreground">Click generate to create random UUIDs (v4).</p>
                 </div>
             )}

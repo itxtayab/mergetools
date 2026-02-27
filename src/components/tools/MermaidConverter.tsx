@@ -188,7 +188,7 @@ export default function MermaidConverter() {
                     ) : svgOutput ? (
                         <div
                             ref={containerRef}
-                            className="flex h-[450px] items-center justify-center rounded-xl border border-input bg-white dark:bg-slate-950 p-4 overflow-auto"
+                            className="flex h-[450px] items-center justify-center rounded-xl border border-input bg-white p-4 overflow-auto"
                             dangerouslySetInnerHTML={{ __html: svgOutput }}
                         />
                     ) : (

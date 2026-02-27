@@ -156,7 +156,7 @@ export default function TextToHtml() {
 
                     {showPreview ? (
                         <div
-                            className="h-[400px] w-full overflow-auto rounded-xl border border-input bg-white dark:bg-slate-950 p-4 text-sm shadow-sm prose dark:prose-invert max-w-none"
+                            className="h-[400px] w-full overflow-auto rounded-xl border border-input bg-white p-4 text-sm shadow-sm prose max-w-none"
                             dangerouslySetInnerHTML={{ __html: htmlOutput }}
                         />
                     ) : (
@@ -164,7 +164,7 @@ export default function TextToHtml() {
                             readOnly
                             value={htmlOutput}
                             placeholder="HTML code will appear here..."
-                            className="font-mono h-[400px] w-full resize-none rounded-xl border border-input bg-slate-50 dark:bg-slate-900 p-4 text-sm shadow-sm focus-visible:outline-none"
+                            className="font-mono h-[400px] w-full resize-none rounded-xl border border-input bg-slate-50 p-4 text-sm shadow-sm focus-visible:outline-none"
                             spellCheck="false"
                         />
                     )}

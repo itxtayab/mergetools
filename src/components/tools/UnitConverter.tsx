@@ -338,7 +338,7 @@ export default function UnitConverter() {
                                 ))}
                             </select>
                             <div className="relative">
-                                <div className="h-14 flex items-center rounded-xl border border-input bg-slate-50 dark:bg-slate-900 px-4 text-2xl font-semibold shadow-sm">
+                                <div className="h-14 flex items-center rounded-xl border border-input bg-slate-50 px-4 text-2xl font-semibold shadow-sm">
                                     {result || <span className="text-muted-foreground text-lg">Result</span>}
                                 </div>
                                 {result && (

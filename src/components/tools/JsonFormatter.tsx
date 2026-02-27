@@ -120,7 +120,7 @@ export default function JsonFormatter() {
                             readOnly
                             value={output}
                             placeholder="Formatted JSON will appear here..."
-                            className="font-mono h-[400px] w-full resize-none rounded-xl border border-input bg-slate-50 dark:bg-slate-900 p-4 text-sm shadow-sm focus-visible:outline-none"
+                            className="font-mono h-[400px] w-full resize-none rounded-xl border border-input bg-slate-50 p-4 text-sm shadow-sm focus-visible:outline-none"
                             spellCheck="false"
                         />
                     )}

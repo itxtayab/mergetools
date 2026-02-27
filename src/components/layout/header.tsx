@@ -3,7 +3,6 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { ModeToggle } from "@/components/mode-toggle";
 import { ChevronDown, Menu, X } from "lucide-react";
 import { CATEGORIES, getToolsByCategory, ToolCategory } from "@/lib/tools-data";
 
@@ -15,10 +14,10 @@ export function Header() {
             <div className="flex items-center justify-center w-full px-4 md:px-8 py-3 sticky top-0 z-50">
                 <header className="w-full max-w-screen-2xl flex items-center justify-between pointer-events-none">
 
-                    {/* Left: Logo tile — white glass pill */}
+                    {/* Left: Logo tile */}
                     <Link
                         href="/"
-                        className="flex items-center gap-2.5 pointer-events-auto rounded-full px-3 py-2 shadow-md border border-border/30 backdrop-blur-md bg-white/80 dark:bg-slate-900/80 transition-all hover:shadow-lg"
+                        className="flex items-center gap-2.5 pointer-events-auto rounded-full px-3 py-2 shadow-md border border-border/30 backdrop-blur-md bg-white/80 transition-all hover:shadow-lg"
                     >
                         <div className="relative h-8 w-8 overflow-hidden rounded-md shrink-0">
                             <Image src="/logo.png" alt="Merge Tools Logo" fill className="object-contain" />
@@ -29,7 +28,7 @@ export function Header() {
                         </span>
                     </Link>
 
-                    {/* Center: Desktop navbar — vibrant gradient + glow */}
+                    {/* Center: Desktop navbar */}
                     <nav
                         className="hidden md:flex items-center justify-center gap-1 text-sm font-semibold rounded-full px-2 h-11 border border-white/25 backdrop-blur-md pointer-events-auto"
                         style={{
@@ -61,7 +60,7 @@ export function Header() {
                                                     <Link
                                                         key={tool.slug}
                                                         href={`/${category}/${tool.slug}`}
-                                                        className="block rounded-lg p-2.5 text-sm leading-none transition-colors hover:bg-black/5 dark:hover:bg-white/5"
+                                                        className="block rounded-lg p-2.5 text-sm leading-none transition-colors hover:bg-black/5"
                                                     >
                                                         <div className="font-medium text-foreground">{tool.name}</div>
                                                         <div className="mt-1.5 line-clamp-1 text-[11px] text-muted-foreground">{tool.description}</div>
@@ -75,11 +74,8 @@ export function Header() {
                         })}
                     </nav>
 
-                    {/* Right: Theme Switcher + Mobile Menu Toggle */}
+                    {/* Right: Mobile Menu Toggle */}
                     <div className="flex items-center justify-end gap-2 pointer-events-auto">
-                        <div className="glass-effect rounded-full shadow-sm border border-border/50">
-                            <ModeToggle />
-                        </div>
                         <button
                             onClick={() => setMobileOpen(!mobileOpen)}
                             className="md:hidden p-2 rounded-full border border-white/25 backdrop-blur-md transition-all text-white hover:shadow-lg"

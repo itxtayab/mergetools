@@ -16,6 +16,7 @@ export function Footer() {
                     <Link href="/contact" className="text-sm font-medium hover:underline underline-offset-4 text-muted-foreground">Contact</Link>
                     <Link href="/privacy-policy" className="text-sm font-medium hover:underline underline-offset-4 text-muted-foreground">Privacy Policy</Link>
                     <Link href="/terms" className="text-sm font-medium hover:underline underline-offset-4 text-muted-foreground">Terms</Link>
+                    <Link href="/disclaimer" className="text-sm font-medium hover:underline underline-offset-4 text-muted-foreground">Disclaimer</Link>
                 </div>
             </div>
         </footer>

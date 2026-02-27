@@ -10,10 +10,10 @@ export default function PrivacyPolicyPage() {
         <div className="mx-auto max-w-4xl space-y-8 pb-12">
             <div className="space-y-4">
                 <h1 className="text-4xl font-bold tracking-tight md:text-5xl">Privacy Policy</h1>
-                <p className="text-muted-foreground">Last Updated: October 2023</p>
+                <p className="text-muted-foreground">Last Updated: February 2026</p>
             </div>
 
-            <div className="prose prose-slate dark:prose-invert max-w-none">
+            <div className="prose prose-slate max-w-none">
                 <p>
                     At Merge Tools, accessible from our website, one of our main priorities is the privacy of our visitors.
                     This Privacy Policy document contains types of information that is collected and recorded by Merge Tools

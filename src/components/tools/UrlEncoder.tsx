@@ -107,7 +107,7 @@ export default function UrlEncoder() {
                             {copied ? "Copied" : "Copy"}
                         </button>
                     </div>
-                    <div className={`flex-1 min-h-[250px] rounded-xl border border-input p-4 text-sm shadow-sm overflow-auto ${output.startsWith("⚠️") ? 'bg-destructive/10 text-destructive border-transparent' : 'bg-slate-50 dark:bg-slate-900 break-all'} font-mono`}>
+                    <div className={`flex-1 min-h-[250px] rounded-xl border border-input p-4 text-sm shadow-sm overflow-auto ${output.startsWith("⚠️") ? 'bg-destructive/10 text-destructive border-transparent' : 'bg-slate-50 break-all'} font-mono`}>
                         {output || <span className="text-muted-foreground">Output will appear here...</span>}
                     </div>
                 </div>
