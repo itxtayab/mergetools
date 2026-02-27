@@ -72,6 +72,10 @@ export function Header() {
                                 </div>
                             );
                         })}
+
+                        <Link href="/blog" className="text-white/80 hover:text-white transition-colors px-3 py-1.5 rounded-full hover:bg-white/10">
+                            Blog
+                        </Link>
                     </nav>
 
                     {/* Right: Mobile Menu Toggle */}
@@ -133,6 +137,14 @@ export function Header() {
                                 </div>
                             );
                         })}
+
+                        <Link
+                            href="/blog"
+                            onClick={() => setMobileOpen(false)}
+                            className="flex items-center gap-3 px-4 py-3 rounded-xl text-base font-semibold transition-colors hover:bg-primary/10 hover:text-primary"
+                        >
+                            Blog
+                        </Link>
                     </nav>
                 </div>
             )}

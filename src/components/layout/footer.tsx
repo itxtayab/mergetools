@@ -12,6 +12,7 @@ export function Footer() {
                     </p>
                 </div>
                 <div className="flex flex-wrap gap-4 items-center justify-center md:justify-end">
+                    <Link href="/blog" className="text-sm font-medium hover:underline underline-offset-4 text-muted-foreground">Blog</Link>
                     <Link href="/about" className="text-sm font-medium hover:underline underline-offset-4 text-muted-foreground">About</Link>
                     <Link href="/contact" className="text-sm font-medium hover:underline underline-offset-4 text-muted-foreground">Contact</Link>
                     <Link href="/privacy-policy" className="text-sm font-medium hover:underline underline-offset-4 text-muted-foreground">Privacy Policy</Link>

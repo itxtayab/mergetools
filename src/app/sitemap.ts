@@ -1,5 +1,6 @@
 import { MetadataRoute } from "next";
 import { CATEGORIES, toolsData, ToolCategory } from "@/lib/tools-data";
+import { getAllBlogSlugs } from "@/lib/blog-data";
 
 export default function sitemap(): MetadataRoute.Sitemap {
     const baseUrl = "https://devpik.com";
@@ -28,5 +29,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
         priority: 0.9,
     }));
 
-    return [...staticRoutes, ...categoryRoutes, ...toolRoutes];
+    // Blog routes
+    const blogListingRoute = {
+        url: `${baseUrl}/blog`,
+        lastModified: new Date(),
+        changeFrequency: "weekly" as const,
+        priority: 0.8,
+    };
+
+    const blogPostRoutes = getAllBlogSlugs().map((slug) => ({
+        url: `${baseUrl}/blog/${slug}`,
+        lastModified: new Date(),
+        changeFrequency: "monthly" as const,
+        priority: 0.7,
+    }));
+
+    return [...staticRoutes, ...categoryRoutes, ...toolRoutes, blogListingRoute, ...blogPostRoutes];
 }
