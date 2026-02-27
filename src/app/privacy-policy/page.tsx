@@ -1,8 +1,8 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "Privacy Policy - Merge Tools",
-    description: "Privacy Policy for Merge Tools. Learn how we handle your data.",
+    title: "Privacy Policy - DevPik",
+    description: "Privacy Policy for DevPik. Learn how we handle your data.",
 };
 
 export default function PrivacyPolicyPage() {
@@ -15,14 +15,14 @@ export default function PrivacyPolicyPage() {
 
             <div className="prose prose-slate max-w-none">
                 <p>
-                    At Merge Tools, accessible from our website, one of our main priorities is the privacy of our visitors.
-                    This Privacy Policy document contains types of information that is collected and recorded by Merge Tools
+                    At DevPik, accessible from our website, one of our main priorities is the privacy of our visitors.
+                    This Privacy Policy document contains types of information that is collected and recorded by DevPik
                     and how we use it.
                 </p>
 
                 <h2>1. Client-Side Processing</h2>
                 <p>
-                    The vast majority of utilities provided on Merge Tools operate entirely on the client-side (within your web browser).
+                    The vast majority of utilities provided on DevPik operate entirely on the client-side (within your web browser).
                     This means that the text, code, or data you input into our tools is processed locally on your device and is
                     <strong> never transmitted to, stored on, or viewed by our servers</strong>. Your data remains strictly confidential
                     and under your complete control.
@@ -30,7 +30,7 @@ export default function PrivacyPolicyPage() {
 
                 <h2>2. Log Files</h2>
                 <p>
-                    Merge Tools follows a standard procedure of using log files. These files log visitors when they visit websites.
+                    DevPik follows a standard procedure of using log files. These files log visitors when they visit websites.
                     All hosting companies do this and a part of hosting services' analytics. The information collected by log files include:
                 </p>
                 <ul>
@@ -58,7 +58,7 @@ export default function PrivacyPolicyPage() {
 
                 <h2>4. Third-Party Privacy Policies</h2>
                 <p>
-                    Merge Tools's Privacy Policy does not apply to other advertisers or websites. Thus, we are advising you to consult
+                    DevPik's Privacy Policy does not apply to other advertisers or websites. Thus, we are advising you to consult
                     the respective Privacy Policies of these third-party ad servers for more detailed information. It may include
                     their practices and instructions about how to opt-out of certain options.
                 </p>

@@ -33,7 +33,7 @@ export default async function ToolPage(props: Props) {
     }
 
     const category = CATEGORIES[tool.category as ToolCategory];
-    const baseUrl = "https://tools.mergemain.com";
+    const baseUrl = "https://devpik.com";
 
     const appSchema = generateSoftwareApplicationSchema(
         tool.name,

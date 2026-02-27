@@ -1,8 +1,8 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "Contact Us - Merge Tools",
-    description: "Get in touch with the Merge Tools team. We are here to help.",
+    title: "Contact Us - DevPik",
+    description: "Get in touch with the DevPik team. We are here to help.",
 };
 
 export default function ContactPage() {
@@ -17,7 +17,7 @@ export default function ContactPage() {
 
             <div className="prose prose-slate max-w-none">
                 <p className="text-lg">
-                    We are constantly working to improve Merge Tools and add new utilities that our users need.
+                    We are constantly working to improve DevPik and add new utilities that our users need.
                     If you have any feedback or feature requests, please reach out to us.
                 </p>
 
@@ -30,15 +30,15 @@ export default function ContactPage() {
                     <div className="space-y-4">
                         <div>
                             <strong className="block text-sm text-muted-foreground">General Inquiries &amp; Support</strong>
-                            <a href="mailto:support@mergemain.com" className="text-primary hover:underline">
-                                support@mergemain.com
+                            <a href="mailto:founders@mergemain.com" className="text-primary hover:underline">
+                                founders@mergemain.com
                             </a>
                         </div>
 
                         <div>
                             <strong className="block text-sm text-muted-foreground">Business &amp; Partnerships</strong>
-                            <a href="mailto:business@mergemain.com" className="text-primary hover:underline">
-                                business@mergemain.com
+                            <a href="mailto:founders@mergemain.com" className="text-primary hover:underline">
+                                founders@mergemain.com
                             </a>
                         </div>
                     </div>

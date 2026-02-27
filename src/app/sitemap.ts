@@ -2,7 +2,7 @@ import { MetadataRoute } from "next";
 import { CATEGORIES, toolsData, ToolCategory } from "@/lib/tools-data";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-    const baseUrl = "https://tools.mergemain.com";
+    const baseUrl = "https://devpik.com";
 
     // Static routes
     const staticRoutes = ["", "/about", "/contact", "/privacy-policy", "/terms", "/disclaimer"].map((route) => ({

@@ -2,8 +2,8 @@ import { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-    title: "Disclaimer - Merge Tools",
-    description: "Disclaimer for Merge Tools. Understand the limitations and terms of using our free online tools.",
+    title: "Disclaimer - DevPik",
+    description: "Disclaimer for DevPik. Understand the limitations and terms of using our free online tools.",
 };
 
 export default function DisclaimerPage() {
@@ -16,8 +16,8 @@ export default function DisclaimerPage() {
 
             <div className="prose prose-slate max-w-none">
                 <p>
-                    The information and tools provided on Merge Tools (accessible at{" "}
-                    <Link href="https://tools.mergemain.com" className="text-primary hover:underline">tools.mergemain.com</Link>)
+                    The information and tools provided on DevPik (accessible at{" "}
+                    <Link href="https://devpik.com" className="text-primary hover:underline">devpik.com</Link>)
                     are for general informational and utility purposes only.
                 </p>
 
@@ -38,10 +38,10 @@ export default function DisclaimerPage() {
 
                 <h2>3. Limitation of Liability</h2>
                 <p>
-                    Under no circumstances shall Merge Tools, its owners, employees, or affiliates be liable for any direct,
+                    Under no circumstances shall DevPik, its owners, employees, or affiliates be liable for any direct,
                     indirect, incidental, special, consequential, or punitive damages arising from the use of, or inability
                     to use, the tools or information provided on this website. This includes, but is not limited to, loss of
-                    data, revenue, or profits, even if Merge Tools has been advised of the possibility of such damages.
+                    data, revenue, or profits, even if DevPik has been advised of the possibility of such damages.
                 </p>
 
                 <h2>4. Accuracy of Conversions and Calculations</h2>
@@ -54,7 +54,7 @@ export default function DisclaimerPage() {
 
                 <h2>5. Third-Party Content</h2>
                 <p>
-                    This website may contain links to third-party websites or services. Merge Tools has no control over the
+                    This website may contain links to third-party websites or services. DevPik has no control over the
                     content, privacy policies, or practices of any third-party sites and assumes no responsibility for them.
                     We strongly encourage you to review the terms and privacy policies of any third-party sites you visit.
                 </p>
@@ -68,7 +68,7 @@ export default function DisclaimerPage() {
                 <h2>7. Contact</h2>
                 <p>
                     If you have any questions about this Disclaimer, please contact us at{" "}
-                    <a href="mailto:support@mergemain.com" className="text-primary hover:underline">support@mergemain.com</a>.
+                    <a href="mailto:founders@mergemain.com" className="text-primary hover:underline">founders@mergemain.com</a>.
                 </p>
             </div>
         </div>

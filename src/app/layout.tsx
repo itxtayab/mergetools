@@ -7,17 +7,17 @@ import { Footer } from "@/components/layout/footer";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://tools.mergemain.com"),
-  title: "Merge Tools - Essential Free Online Tools",
+  metadataBase: new URL("https://devpik.com"),
+  title: "DevPik - Essential Free Online Tools",
   description: "A premium collection of free online tools for developers, writers, and digital professionals. Fast, secure, and client-side.",
   icons: {
     icon: "/logo.png",
     apple: "/logo.png",
   },
   openGraph: {
-    siteName: "Merge Tools",
+    siteName: "DevPik",
     type: "website",
-    url: "https://tools.mergemain.com",
+    url: "https://devpik.com",
   },
 };
 

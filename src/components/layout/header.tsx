@@ -20,11 +20,11 @@ export function Header() {
                         className="flex items-center gap-2.5 pointer-events-auto rounded-full px-3 py-2 shadow-md border border-border/30 backdrop-blur-md bg-white/80 transition-all hover:shadow-lg"
                     >
                         <div className="relative h-8 w-8 overflow-hidden rounded-md shrink-0">
-                            <Image src="/logo.png" alt="Merge Tools Logo" fill className="object-contain" />
+                            <Image src="/logo.png" alt="DevPik Logo" fill className="object-contain" />
                         </div>
                         <span className="font-extrabold tracking-tight text-base hidden sm:inline-flex whitespace-nowrap gap-0">
-                            <span style={{ color: "#003F87" }}>Merge</span>
-                            <span className="text-foreground ml-0.5">Tools</span>
+                            <span style={{ color: "#003F87" }}>Dev</span>
+                            <span className="text-foreground ml-0.5">Pik</span>
                         </span>
                     </Link>
 
