@@ -62,7 +62,7 @@ export default async function BlogPostPage(props: Props) {
 
     const articleSchema = {
         "@context": "https://schema.org",
-        "@type": "Article",
+        "@type": "BlogPosting",
         headline: post.title,
         description: post.metaDescription,
         image: `https://devpik.com${post.heroImage}`,
@@ -87,6 +87,10 @@ export default async function BlogPostPage(props: Props) {
             "@type": "WebPage",
             "@id": `https://devpik.com/blog/${post.slug}`,
         },
+        keywords: post.tags.join(", "),
+        wordCount: post.content.reduce((acc, section) => acc + section.body.split(/\s+/).length, 0),
+        articleSection: post.tags[0] || "Technology",
+        inLanguage: "en-US",
     };
 
     const faqSchema =

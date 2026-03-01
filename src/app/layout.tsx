@@ -1,16 +1,21 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Outfit } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { StructuredData } from "@/components/seo/StructuredData";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
+const outfit = Outfit({ subsets: ["latin"], variable: "--font-outfit" });
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://devpik.com"),
-  title: "DevPik - Essential Free Online Tools",
-  description: "A premium collection of free online tools for developers, writers, and digital professionals. Fast, secure, and client-side.",
+  title: {
+    default: "DevPik - Best Free AI Tools, Developer Utilities & Tech Blog",
+    template: "%s | DevPik",
+  },
+  description: "Discover the best free AI tools, online developer utilities, and in-depth blogs about the newest AI technology. 18+ tools running 100% client-side — fast, private, and free forever.",
+  keywords: ["AI tools", "free online tools", "developer tools", "AI image generator", "AI humanizer", "AI blog", "AI technology", "free developer tools", "text tools", "JSON formatter", "Base64 encoder", "word counter"],
   icons: {
     icon: "/logo.png",
     apple: "/logo.png",
@@ -19,6 +24,21 @@ export const metadata: Metadata = {
     siteName: "DevPik",
     type: "website",
     url: "https://devpik.com",
+    title: "DevPik - Best Free AI Tools, Developer Utilities & Tech Blog",
+    description: "Discover the best free AI tools, online developer utilities, and in-depth blogs about the newest AI technology. 18+ tools running 100% client-side.",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "DevPik - Best Free AI Tools, Developer Utilities & Tech Blog",
+    description: "Discover the best free AI tools, online developer utilities, and in-depth blogs about the newest AI technology.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
   },
 };
 
@@ -28,6 +48,7 @@ const organizationSchema = {
   name: "DevPik",
   url: "https://devpik.com",
   logo: "https://devpik.com/logo.png",
+  description: "DevPik is a platform for free AI tools, developer utilities, and technology insights.",
   sameAs: [],
   contactPoint: {
     "@type": "ContactPoint",
@@ -41,7 +62,7 @@ const websiteSchema = {
   "@type": "WebSite",
   name: "DevPik",
   url: "https://devpik.com",
-  description: "A premium collection of free online tools for developers, writers, and digital professionals.",
+  description: "Discover the best free AI tools, online developer utilities, and blogs about the newest AI technology.",
   potentialAction: {
     "@type": "SearchAction",
     target: "https://devpik.com/?q={search_term_string}",
@@ -57,7 +78,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head />
-      <body className={`${inter.className} min-h-screen bg-background text-foreground antialiased selection:bg-primary/30 selection:text-primary`}>
+      <body className={`${inter.variable} ${outfit.variable} font-sans min-h-screen bg-background text-foreground antialiased selection:bg-primary/30 selection:text-primary`}>
         <StructuredData data={organizationSchema} />
         <StructuredData data={websiteSchema} />
         <div className="relative flex min-h-screen flex-col">
@@ -73,4 +94,3 @@ export default function RootLayout({
     </html>
   );
 }
-
