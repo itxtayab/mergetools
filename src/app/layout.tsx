@@ -20,17 +20,27 @@ export const metadata: Metadata = {
     icon: "/logo.png",
     apple: "/logo.png",
   },
+  manifest: "/manifest.json",
   openGraph: {
     siteName: "DevPik",
     type: "website",
     url: "https://devpik.com",
     title: "DevPik - Best Free AI Tools, Developer Utilities & Tech Blog",
     description: "Discover the best free AI tools, online developer utilities, and in-depth blogs about the newest AI technology. 18+ tools running 100% client-side.",
+    images: [
+      {
+        url: "https://devpik.com/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "DevPik - Free AI Tools & Developer Utilities",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "DevPik - Best Free AI Tools, Developer Utilities & Tech Blog",
     description: "Discover the best free AI tools, online developer utilities, and in-depth blogs about the newest AI technology.",
+    images: ["https://devpik.com/og-image.png"],
   },
   robots: {
     index: true,
